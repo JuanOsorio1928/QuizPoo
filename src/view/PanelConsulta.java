@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 import java.time.LocalDate;
 /**
  *
- * @author User1
+ * @author Juan Osorio
  */
 public class PanelConsulta extends javax.swing.JPanel {
 

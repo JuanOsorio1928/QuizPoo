@@ -23,6 +23,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setTitle("Bienvenido, " + rol);
         setVisible(true);
         viewModel = new ClinicaViewModel(); 
+        
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowsClosing(java.awt.event.WindowEvent e){
+                viewModel.guardarTodo();
+                System.out.println("Datos guardados al cerrar.");
+            }
+        });
     }
 
     /**
@@ -48,6 +55,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnVerHistorialPacientes.setText("Ver Historial Del Paciente");
+        btnVerHistorialPacientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerHistorialPacientesActionPerformed(evt);
+            }
+        });
 
         btnVerConsultasMedico.setText("Ver Consultas Por Medico");
 
@@ -163,6 +175,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         panelContenido.revalidate();
         panelContenido.repaint();
     }//GEN-LAST:event_btnAsignarConsultasActionPerformed
+
+    private void btnVerHistorialPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerHistorialPacientesActionPerformed
+        panelContenido.removeAll();
+        panelContenido.add(new PanelHistorial(viewModel));
+        panelContenido.revalidate();
+        panelContenido.repaint();
+    }//GEN-LAST:event_btnVerHistorialPacientesActionPerformed
 
     /**
      * @param args the command line arguments

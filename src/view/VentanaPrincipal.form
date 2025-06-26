@@ -101,6 +101,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Ver Historial Del Paciente"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVerHistorialPacientesActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnVerConsultasMedico">
           <Properties>

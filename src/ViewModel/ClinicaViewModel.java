@@ -23,17 +23,17 @@ public class ClinicaViewModel {
     
     public void registrarPaciente(Paciente paciente){
         clinica.registrarPaciente(paciente);
-        clinica.GuardarTodo();
+        clinica.guardarTodo();
     }
     
     public void registrarMedico(Medico medico){
         clinica.registrarMedico(medico);
-        clinica.GuardarTodo();
+        clinica.guardarTodo();
     }
     
     public void registroConsulta(Consulta consulta){
         clinica.registrarConsulta(consulta);
-        clinica.GuardarTodo();
+        clinica.guardarTodo();
     }
     
     public Paciente buscarPacientePorDocumento(String documento){
@@ -62,5 +62,13 @@ public class ClinicaViewModel {
     
     public List<Consulta> obtenerTodasLasConsultas(){
         return clinica.getConsultas();
+    }
+    
+    public List<Consulta> obtenerConsultasPorPaciente(String documento){
+        return clinica.getConsultasPorPaciente(documento);
+    }
+    
+    public void guardarTodo(){
+        clinica.guardarTodo();
     }
 }

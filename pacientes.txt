@@ -1,1 +1,2 @@
-Juan,1234,salud
+Juan Osorio,1234,salud total
+Paciente2,1123,salud total

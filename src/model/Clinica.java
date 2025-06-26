@@ -47,19 +47,30 @@ public class Clinica {
                 .filter( c -> c.getPaciente().getDocumento().equals(documentoPaciente))
                 .collect(Collectors.toList());
         }
+    
     public List<Consulta> consultasPorMedico(String documentoMedico){
         return consultas.stream()
                 .filter(c -> c.getMedico().getDocumento().equals(documentoMedico))
                 .collect(Collectors.toList());
         }
     
+    public List<Consulta> getConsultasPorPaciente(String documentoPaciente) {
+        List<Consulta> resultado = new ArrayList<>();
+        for (Consulta c : consultas) {
+            if(c.getPaciente().getDocumento().equals(documentoPaciente)){
+                resultado.add(c);
+            }
+        }
+        return resultado;
+    }
     public List<Paciente> getPacientes() { return pacientes; }
     public List<Medico> getMedicos() { return medicos; }
     public List<Consulta> getConsultas() { return consultas; }
     
-    public void GuardarTodo(){
+    public void guardarTodo(){
         persistenciaArchivos.guardarPacientes(pacientes);
         persistenciaArchivos.guardarMedicos(medicos);
+        persistenciaArchivos.guardarConsultas(consultas);
     }
     
     public void CargarTodo(){
