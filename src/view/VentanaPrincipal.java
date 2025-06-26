@@ -5,8 +5,6 @@
 package view;
 
 import ViewModel.ClinicaViewModel;
-import view.PanelConsulta;
-import view.PanelRegistro;
 /**
  *
  * @author Juan Osorio
@@ -15,7 +13,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private ClinicaViewModel viewModel;
     /**
-     * Creates new form VentanaPrincipal
+     * Creates new form VentanaPri
      */
     public VentanaPrincipal(String rol) {
         initComponents();
@@ -36,56 +34,83 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnRegistroPaciente = new javax.swing.JButton();
-        btnRegistroMedico = new javax.swing.JButton();
-        btnAsignarConsulta = new javax.swing.JButton();
-        btnVerHistorialPaciente = new javax.swing.JButton();
-        btnVerConsultasMedico = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jCheckBox1 = new javax.swing.JCheckBox();
         jPanel1 = new javax.swing.JPanel();
+        btnVerHistorialPacientes = new javax.swing.JButton();
+        btnVerConsultasMedico = new javax.swing.JButton();
+        btnAsignarConsultas = new javax.swing.JButton();
+        btnRegistroMedicos = new javax.swing.JButton();
+        btnRegistroPacientes = new javax.swing.JButton();
         panelContenido = new javax.swing.JPanel();
+
+        jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnRegistroPaciente.setText("Registrar Paciente");
-        btnRegistroPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistroPacienteActionPerformed(evt);
-            }
-        });
-
-        btnRegistroMedico.setText("Registar Medico");
-        btnRegistroMedico.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistroMedicoActionPerformed(evt);
-            }
-        });
-
-        btnAsignarConsulta.setText("Asignar Consulta");
-        btnAsignarConsulta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAsignarConsultaActionPerformed(evt);
-            }
-        });
-
-        btnVerHistorialPaciente.setText("Ver Historial Del Paciente");
-        btnVerHistorialPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVerHistorialPacienteActionPerformed(evt);
-            }
-        });
+        btnVerHistorialPacientes.setText("Ver Historial Del Paciente");
 
         btnVerConsultasMedico.setText("Ver Consultas Por Medico");
 
-        jPanel2.setLayout(new java.awt.CardLayout());
+        btnAsignarConsultas.setText("Asignar Consulta");
+        btnAsignarConsultas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsignarConsultasActionPerformed(evt);
+            }
+        });
 
-        jPanel1.setLayout(new java.awt.CardLayout());
+        btnRegistroMedicos.setText("Registrar Medico");
+        btnRegistroMedicos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistroMedicosActionPerformed(evt);
+            }
+        });
+
+        btnRegistroPacientes.setText("Registrar Paciente");
+        btnRegistroPacientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistroPacientesActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnVerConsultasMedico)
+                        .addComponent(btnVerHistorialPacientes))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRegistroMedicos)
+                            .addComponent(btnAsignarConsultas)
+                            .addComponent(btnRegistroPacientes))))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnRegistroPacientes)
+                .addGap(18, 18, 18)
+                .addComponent(btnRegistroMedicos)
+                .addGap(18, 18, 18)
+                .addComponent(btnAsignarConsultas)
+                .addGap(18, 18, 18)
+                .addComponent(btnVerHistorialPacientes)
+                .addGap(18, 18, 18)
+                .addComponent(btnVerConsultasMedico)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout panelContenidoLayout = new javax.swing.GroupLayout(panelContenido);
         panelContenido.setLayout(panelContenidoLayout);
         panelContenidoLayout.setHorizontalGroup(
             panelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 299, Short.MAX_VALUE)
+            .addGap(0, 161, Short.MAX_VALUE)
         );
         panelContenidoLayout.setVerticalGroup(
             panelContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,84 +123,76 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnVerConsultasMedico)
-                        .addComponent(btnVerHistorialPaciente))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnAsignarConsulta)
-                                .addComponent(btnRegistroMedico))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(btnRegistroPaciente)))))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(panelContenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panelContenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnRegistroPaciente)
-                        .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnRegistroMedico)
-                                .addGap(25, 25, 25)
-                                .addComponent(btnAsignarConsulta)
-                                .addGap(25, 25, 25)
-                                .addComponent(btnVerHistorialPaciente))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25)
-                        .addComponent(btnVerConsultasMedico)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRegistroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroPacienteActionPerformed
+    private void btnRegistroPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroPacientesActionPerformed
         PanelRegistro panel = new PanelRegistro(viewModel);
         panelContenido.add(panel, "registro Paciente.");
         
         java.awt.CardLayout cl = (java.awt.CardLayout) panelContenido.getLayout();
         cl.show(panelContenido, "Registro paciente.");
-    }//GEN-LAST:event_btnRegistroPacienteActionPerformed
+    }//GEN-LAST:event_btnRegistroPacientesActionPerformed
 
-    private void btnRegistroMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroMedicoActionPerformed
+    private void btnRegistroMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroMedicosActionPerformed
         PanelRegistro panel = new PanelRegistro(viewModel);
         panelContenido.add(panel, "registro Medico.");
         
         java.awt.CardLayout cl = (java.awt.CardLayout) panelContenido.getLayout();
         cl.show(panelContenido, "Registro Medico.");
-    }//GEN-LAST:event_btnRegistroMedicoActionPerformed
+    }//GEN-LAST:event_btnRegistroMedicosActionPerformed
 
-    private void btnAsignarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignarConsultaActionPerformed
+    private void btnAsignarConsultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignarConsultasActionPerformed
         panelContenido.removeAll();
         panelContenido.add(new PanelConsulta(viewModel));
         panelContenido.revalidate();
         panelContenido.repaint();
-    }//GEN-LAST:event_btnAsignarConsultaActionPerformed
-
-    private void btnVerHistorialPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerHistorialPacienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVerHistorialPacienteActionPerformed
+    }//GEN-LAST:event_btnAsignarConsultasActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */   
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VentanaPrincipal("admin").setVisible(true);
@@ -184,13 +201,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAsignarConsulta;
-    private javax.swing.JButton btnRegistroMedico;
-    private javax.swing.JButton btnRegistroPaciente;
+    private javax.swing.JButton btnAsignarConsultas;
+    private javax.swing.JButton btnRegistroMedicos;
+    private javax.swing.JButton btnRegistroPacientes;
     private javax.swing.JButton btnVerConsultasMedico;
-    private javax.swing.JButton btnVerHistorialPaciente;
+    private javax.swing.JButton btnVerHistorialPacientes;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel panelContenido;
     // End of variables declaration//GEN-END:variables
 }

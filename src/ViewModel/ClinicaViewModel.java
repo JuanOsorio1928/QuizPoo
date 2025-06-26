@@ -18,18 +18,22 @@ public class ClinicaViewModel {
     
     public ClinicaViewModel() {
         clinica = new Clinica();
+        clinica.CargarTodo();
     }
     
     public void registrarPaciente(Paciente paciente){
         clinica.registrarPaciente(paciente);
+        clinica.GuardarTodo();
     }
     
     public void registrarMedico(Medico medico){
         clinica.registrarMedico(medico);
+        clinica.GuardarTodo();
     }
     
     public void registroConsulta(Consulta consulta){
         clinica.registrarConsulta(consulta);
+        clinica.GuardarTodo();
     }
     
     public Paciente buscarPacientePorDocumento(String documento){

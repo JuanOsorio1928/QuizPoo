@@ -19,8 +19,8 @@ public class PanelConsulta extends javax.swing.JPanel {
     private ClinicaViewModel viewModel;
     
     public PanelConsulta(ClinicaViewModel viewModel) {
-        this.viewModel = viewModel;
         initComponents();
+        this.viewModel = viewModel;
         cargarPacientesYMedicos();
     }
 
@@ -33,8 +33,11 @@ public class PanelConsulta extends javax.swing.JPanel {
         btnRegistroConsulta = new javax.swing.JButton();
         ComboMedico = new javax.swing.JComboBox<>();
         ComboPaciente = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        txtMotivoConsulta.setText("jTextField1");
+        txtMotivoConsulta.setText("Descripccion de su cita");
         txtMotivoConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMotivoConsultaActionPerformed(evt);
@@ -48,19 +51,23 @@ public class PanelConsulta extends javax.swing.JPanel {
             }
         });
 
-        ComboMedico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         ComboMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ComboMedicoActionPerformed(evt);
             }
         });
 
-        ComboPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         ComboPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ComboPacienteActionPerformed(evt);
             }
         });
+
+        jLabel1.setText("Seleccione paciente:");
+
+        jLabel2.setText("Seleccione Medico:");
+
+        jLabel3.setText("Motivo de su consulta:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -69,30 +76,42 @@ public class PanelConsulta extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(ComboMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ComboPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtMotivoConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(116, 116, 116)
+                        .addComponent(btnRegistroConsulta))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addComponent(btnRegistroConsulta)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(ComboPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ComboMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtMotivoConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2))))))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ComboMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ComboPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtMotivoConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRegistroConsulta)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -117,48 +136,40 @@ public class PanelConsulta extends javax.swing.JPanel {
         ComboMedico.removeAllItems();
         
         for (Paciente p : viewModel.obtenerTodosLosPacientes()){
-            ComboPaciente.addItem(p.getNombre() + " - " + p.getDocumento() + " - ");
+            ComboPaciente.addItem(p);
         }
         for(Medico m : viewModel.obtenerTodosLosMedicos()){
-            ComboMedico.addItem(m.getNombre() + " - " + m.getDocumento() + " - ");
+            ComboMedico.addItem(m);
         }
     }
     
     private void registrarConsulta(){
-        String pacientetxt = (String) ComboPaciente.getSelectedItem();
-        String medicotxt = (String) ComboMedico.getSelectedItem();
-        String motivotxt = (String) txtMotivoConsulta.getText();
+        Paciente paciente = (Paciente) ComboPaciente.getSelectedItem();
+        Medico medico = (Medico) ComboMedico.getSelectedItem();
+        String motivotxt = txtMotivoConsulta.getText().trim();
         
-        if(pacientetxt == null || medicotxt == null || motivotxt.isEmpty()){
+        if(paciente == null || medico == null || motivotxt.isEmpty()){
             JOptionPane.showMessageDialog(this, "Debe llenar todos los espacios.");
             return;
         }
         
-        String docPaciente = pacientetxt.split(" - ")[1];
-        String docMedico = medicotxt.split (" - ")[1];
-        
-        Paciente paciente = viewModel.buscarPacientePorDocumento(docPaciente);
-        Medico medico = viewModel.buscarMedicoPorDocumento(docMedico);
-        
-        if (paciente == null || medico == null){
-            JOptionPane.showMessageDialog(this, "paciente o medico no encontrados.");
-            return;
-        }
-        
         String fecha = LocalDate.now().toString();
-        String sintomas = motivotxt;
-        String diagnostico = "Pendiente.";
+        String diagnostico = "Pendiente. ";
         String tratamiento = "Pendiente.";
-        Consulta consulta = new Consulta(paciente, medico, fecha, sintomas, diagnostico, tratamiento);
+        
+        Consulta consulta = new Consulta (paciente, medico, fecha, motivotxt, diagnostico, tratamiento);
         viewModel.registroConsulta(consulta);
         JOptionPane.showMessageDialog(this, "Consulta registrada correctamente.");
         txtMotivoConsulta.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> ComboMedico;
-    private javax.swing.JComboBox<String> ComboPaciente;
+    private javax.swing.JComboBox<Medico> ComboMedico;
+    private javax.swing.JComboBox<Paciente> ComboPaciente;
     private javax.swing.JButton btnRegistroConsulta;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField txtMotivoConsulta;
     // End of variables declaration//GEN-END:variables
 }

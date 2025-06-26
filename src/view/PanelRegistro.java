@@ -64,9 +64,9 @@ public class PanelRegistro extends javax.swing.JPanel {
         txtTelefono = new javax.swing.JTextField();
         labelHorario = new javax.swing.JLabel();
         txtHorario = new javax.swing.JTextField();
+        btnRegistrar = new javax.swing.JButton();
         labelEps = new javax.swing.JLabel();
         txtEps = new javax.swing.JTextField();
-        btnRegistrar = new javax.swing.JButton();
 
         jLabel6.setText("jLabel6");
 
@@ -113,16 +113,16 @@ public class PanelRegistro extends javax.swing.JPanel {
 
         txtHorario.setText("txtHorario");
 
-        labelEps.setText("eps:");
-
-        txtEps.setText("txtEps");
-
         btnRegistrar.setText("Registrar");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
             }
         });
+
+        labelEps.setText("eps:");
+
+        txtEps.setText("txtEps");
 
         jLayeredPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(txtDocumento, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -136,9 +136,9 @@ public class PanelRegistro extends javax.swing.JPanel {
         jLayeredPane1.setLayer(txtTelefono, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(labelHorario, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(txtHorario, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(btnRegistrar, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(labelEps, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(txtEps, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnRegistrar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -147,7 +147,7 @@ public class PanelRegistro extends javax.swing.JPanel {
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
+                        .addGap(20, 20, 20)
                         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(labelesp)
                             .addComponent(jLabel2)
@@ -168,7 +168,7 @@ public class PanelRegistro extends javax.swing.JPanel {
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                         .addGap(78, 78, 78)
                         .addComponent(btnRegistrar)))
-                .addGap(47, 47, 47))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,8 +187,8 @@ public class PanelRegistro extends javax.swing.JPanel {
                     .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelesp)
-                    .addComponent(txtEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelEps)
+                    .addComponent(txtEps, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labeltel)
@@ -199,9 +199,9 @@ public class PanelRegistro extends javax.swing.JPanel {
                     .addComponent(txtHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelEps)
-                    .addComponent(txtEps, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(labelesp)
+                    .addComponent(txtEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(btnRegistrar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -212,7 +212,7 @@ public class PanelRegistro extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLayeredPane1)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -233,12 +233,11 @@ public class PanelRegistro extends javax.swing.JPanel {
                         .addGap(141, 141, 141)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(ComboRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                        .addContainerGap(95, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ComboRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,14 +255,7 @@ public class PanelRegistro extends javax.swing.JPanel {
     private void ComboRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboRegistroActionPerformed
         String rolSelected = ComboRegistro.getSelectedItem().toString();
         
-        if(rolSelected.equalsIgnoreCase("Medico")) {
-            labelesp.setVisible(true);
-            labeltel.setVisible(true);
-            labelHorario.setVisible(true);
-            txtEspecialidad.setVisible(true);
-            txtTelefono.setVisible(true);
-            txtHorario.setVisible(true);
-        } else {
+        if(rolSelected.equalsIgnoreCase("Paciente")) {
             labelEps.setVisible(true);
             txtEps.setVisible(true);
             labelesp.setVisible(false);
@@ -272,6 +264,16 @@ public class PanelRegistro extends javax.swing.JPanel {
             txtEspecialidad.setVisible(false);
             txtTelefono.setVisible(false);
             txtHorario.setVisible(false);
+        } else if(rolSelected.equalsIgnoreCase("Medico")) {
+            txtEps.setText("");
+            txtEps.setVisible(false);
+            labelEps.setVisible(false);
+            labelesp.setVisible(true);
+            labeltel.setVisible(true);
+            labelHorario.setVisible(true);
+            txtEspecialidad.setVisible(true);
+            txtTelefono.setVisible(true);
+            txtHorario.setVisible(true);
         }
     }//GEN-LAST:event_ComboRegistroActionPerformed
 

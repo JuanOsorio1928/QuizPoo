@@ -27,4 +27,9 @@ public class Medico extends Persona{
     public void setEspecialidad(String especialidad) { this.especialidad = especialidad ; }
     public void setHorario(String horario) { this.horario = horario ; }
     public void setTelefono(String telefono) { this.telefono = telefono ; }
+    
+    @Override
+    public String toString(){
+        return nombre + " - " + documento;
+    }
 }

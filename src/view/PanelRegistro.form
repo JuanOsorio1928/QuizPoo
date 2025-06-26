@@ -30,15 +30,14 @@
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Component id="ComboRegistro" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="95" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="ComboRegistro" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="88" max="32767" attributes="0"/>
+              <EmptySpace pref="90" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -83,9 +82,9 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLayeredPane1" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -109,7 +108,7 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="labelesp" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -127,7 +126,7 @@
                                   <Component id="txtEspecialidad" alignment="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="txtTelefono" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtHorario" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtEps" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtEps" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -135,7 +134,7 @@
                               <Component id="btnRegistrar" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <EmptySpace pref="50" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -159,10 +158,10 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelesp" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEspecialidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelEps" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEps" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labeltel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -174,10 +173,10 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelEps" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEps" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelesp" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEspecialidad" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Component id="btnRegistrar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -251,6 +250,14 @@
                 <Property name="text" type="java.lang.String" value="txtHorario"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JButton" name="btnRegistrar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Registrar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarActionPerformed"/>
+              </Events>
+            </Component>
             <Component class="javax.swing.JLabel" name="labelEps">
               <Properties>
                 <Property name="text" type="java.lang.String" value="eps:"/>
@@ -260,14 +267,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="txtEps"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnRegistrar">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Registrar"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>

@@ -7,6 +7,7 @@ package model;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
+import persistencia.persistenciaArchivos;
 
 /**
  *
@@ -55,5 +56,15 @@ public class Clinica {
     public List<Paciente> getPacientes() { return pacientes; }
     public List<Medico> getMedicos() { return medicos; }
     public List<Consulta> getConsultas() { return consultas; }
+    
+    public void GuardarTodo(){
+        persistenciaArchivos.guardarPacientes(pacientes);
+        persistenciaArchivos.guardarMedicos(medicos);
+    }
+    
+    public void CargarTodo(){
+        persistenciaArchivos.cargarMedicos(medicos);
+        persistenciaArchivos.cargarPacientes(pacientes);
+    }
     }
 

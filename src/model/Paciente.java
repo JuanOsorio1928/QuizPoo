@@ -19,4 +19,9 @@ public class Paciente extends Persona{
     public String getEps () { return eps; }
     
     public void setEps (String eps) {this.eps = eps; }
+    
+    @Override
+    public String toString(){
+        return nombre + " - " + documento;
+    }
 }
